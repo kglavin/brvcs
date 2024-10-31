@@ -1,0 +1,107 @@
+{
+    "DriverACL": {
+        "enabled": false,
+        "remediate": true,
+        "type": 0,
+        "acl": []
+    },
+    "ProcessACL": {
+        "enabled": false,
+        "remediate": true,
+        "type": 0,
+        "acl": []
+    },
+    "FileProtection": {
+        "read_only": {
+            "enabled": true,
+            "remediate": true
+        },
+        "file_ops": {
+            "enabled": true,
+            "remediate": true,
+            "strict": false
+        },
+        "dirtycred": {
+            "enabled": true,
+            "remediate": true
+        }
+    },
+    "Logging": {
+        "driver": true,
+        "process": false,
+        "kaccess_violations": true,
+        "kernel_exec": false,
+        "unknown_fileops": false,
+        "container": true
+    },
+    "Hypercall__Timeout": {
+        "enabled": false,
+        "remediate": true
+    },
+    "IntegrityProtection": {
+        "enabled": true,
+        "remediate": true,
+        "kernel_integrity_mutable": true,
+        "kernel_integrity_dynamic": true,
+        "kernel_integrity_freeze_after_start": false,
+        "kernel_integrity_freeze_after_boot": false,
+        "pagetable_protection": {
+            "enabled": true,
+            "remediate": false
+        }
+    },
+    "StrongIsolation": {
+        "enabled": true,
+        "remediate": true,
+        "isolate": false,
+        "allow_forced_mem_access": false
+    },
+    "CredProtection": {
+        "enabled": true,
+        "remediate": true
+    },
+    "GuestKernelConfig": {
+        "userspace_force_nx_stack": false
+    },
+    "RegisterProtect": {
+        "filter": [],
+        "counter": []
+    },
+    "RegisterProtectVAS": {
+        "enabled": true,
+        "remediate": true
+    },
+    "GuestPolicy": {
+        "enabled": false
+    },
+    "HeartBeat": {
+        "enabled": true,
+        "interval_sec": 300
+    },
+    "Modprobe": {
+        "enabled": false,
+        "modprobe_path": "/sbin/modprobe"
+    },
+    "ContainerIntegrity": {
+        "new_file_exec": {
+            "enabled": false,
+            "remediate": true
+        },
+        "interpreter_arg_new_file": {
+            "enabled": false,
+            "remediate": true,
+            "interpreter": []
+        },
+        "interpreter_arg_cmd": {
+            "enabled": false,
+            "remediate": true,
+            "interpreter": [],
+            "interpreter_cmd": {}
+        },
+        "interpreter_binds": {
+            "enabled": false,
+            "remediate": true,
+            "interpreter": []
+        }
+    }
+}
